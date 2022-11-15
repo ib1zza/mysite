@@ -254,4 +254,8 @@ h6
 
 #react {
     display: inline-block;
+
+    &:hover {
+        transform: scale(1.5);
+    }
 }

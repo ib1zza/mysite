@@ -1,4 +1,4 @@
-// import anime from "./anime";
+import anime from "./anime.js";
 
 function ibg() {
   let ibg = document.querySelectorAll(".ibg");
@@ -12,14 +12,35 @@ function ibg() {
 
 ibg();
 
-const reactLogoEl = document.getElementById("react");
+const reactLogoEl = document.querySelector(".header__logo");
+const reactLogo = document.querySelector("#react");
 
-const animate = (el) => {
-  el.style.tran;
-};
-reactLogoEl.addEventListener("mouseenter", () => animate(reactLogoEl));
-
-anime({
-  targets: reactLogoEl,
-  translateX: 270
+const loopRotate = anime({
+  targets: reactLogo,
+  loop: true,
+  duration: 4000,
+  rotate: "1turn",
+  easing: "linear",
 });
+
+// const scaleEl = anime({
+//   targets: reactLogoEl,
+//   duration: 1000,
+//   scale: 2,
+//   easing: "linear",
+// });
+
+loopRotate.start;
+
+const h = (el) => {
+  loopRotate.reverse();
+};
+
+const l = (el) => {
+  loopRotate.reverse();
+};
+
+// animation.seek(animation.duration);
+
+reactLogoEl.addEventListener("mouseover", () => h(reactLogo));
+reactLogoEl.addEventListener("mouseleave", () => l(reactLogo));
