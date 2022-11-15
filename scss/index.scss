@@ -102,11 +102,17 @@ a:focus, a:active, a:hover {
 
 
 .button {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     color: #FFFFFF;
     background-color: transparent;
     border: 1px solid #C778DD;
-
+    &>:not(:last-child) {
+        margin-right: 5px;
+    }
     &:hover {
         background: rgba(199, 120, 221, 0.2);
     }
@@ -118,7 +124,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6
 {
     color: #FFFFFF;
 }
@@ -127,6 +133,7 @@ h6,
     &__header {
         display: flex;
         align-items: center;
+        margin-bottom: 48px;
         &>h1 {
             padding-left: 20px;
             font-weight: 500;
@@ -154,7 +161,7 @@ h6,
 
     }
     &__projects {
-        margin-top: 48px;
+        
         display: flex;
         justify-content: space-between;
         align-items: stretch;
@@ -192,4 +199,59 @@ h6,
             }
         }
     }
+}
+
+.skillsBlock {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    &__grid {
+        align-self: flex-end;
+        display: flex;
+        width: 60%;
+        &>.col {
+            display: flex;
+            flex-direction: column;
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+            
+            &>.skill {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ABB2BF;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                &>* {
+                    padding: 8px;
+                }
+
+                &>h4 {
+                    border-bottom: 1px solid #ABB2BF; 
+                }
+            }
+        }
+    }
+    
+
+}
+
+.aboutBlock {
+    margin-top: 70px;
+    &__text {
+        width: 40%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        &>p {
+        margin-bottom: 20px;
+        }
+    }
+}
+
+
+#react {
+    display: inline-block;
 }

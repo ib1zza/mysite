@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link type="text/css" rel="stylesheet" href="./scss/index.css">
+    <link href="/assets/css/fontawesome.css" rel="stylesheet">
+    <link href="/assets/css/brands.css" rel="stylesheet">
+    <link href="/assets/css/solid.css" rel="stylesheet">
+    
 </head>
 <body>
 
 <header class="header _container">
     <div class="header__logo">
-
+        <div id="react"><i class="fa-brands fa-react"></i></div>
         ib1zza
     </div>
     <div class="header__links">
@@ -23,19 +27,19 @@
     </div>
 </header>
 
-<div class="_container welcomeBlock">
-    <div class="welcomeBlock__text">
-        <h1>Elias is a web designer and front-end developer</h1>
-        <p>He crafts responsive websites where technologies meet creativity</p>
-        <button class="button">Contact me!!</button>
+    <div class="_container welcomeBlock">
+        <div class="welcomeBlock__text">
+            <h1>Elias is a web designer and front-end developer</h1>
+            <p>He crafts responsive websites where technologies meet creativity</p>
+            <button class="button">Contact me!!</button>
+        </div>
+
+        <div class="welcomeBlock__photo">
+            <img src="https://avatars.githubusercontent.com/u/80410813?v=4" alt="">
+        </div>
     </div>
 
-    <div class="welcomeBlock__photo">
-        <img src="https://avatars.githubusercontent.com/u/80410813?v=4" alt="">
-    </div>
-</div>
-
-<div class="_container projectsBlock">
+    <div class="_container projectsBlock">
     <div class="projectsBlock__header">
         <h1>projects</h1>
         <div class="projectsBlock__header__line"></div>
@@ -97,7 +101,66 @@
                 </button>
             </div>
         </div>
+        
     </div>
-</div>
+    </div>
+
+    <div class="skillsBlock _container">
+        <div class="projectsBlock__header">
+            <h1>skills</h1>
+            <div class="projectsBlock__header__line"></div>
+        </div>
+        <div class="skillsBlock__grid">
+            <div class="col">
+                <div class="skill">
+                    <h4>Languages</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill">
+                    <h4>Databases</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="skill">
+                    <h4>Other</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill">
+                    <h4>Tools</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <div class="skill">
+                    <h4>Frameworks</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+           
+        
+    </div>
+
+    <div class="_container aboutBlock">
+        <div class="projectsBlock__header">
+            <h1>about-me</h1>
+            <div class="projectsBlock__header__line"></div>
+        </div>
+        <div class="aboutBlock__text">
+            <p>
+                Hello, i’m Elias!   
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                 Eligendi aperiam possimus atque iure officia dignissimos
+                  ex ipsa harum qui dolor voluptates doloremque consequuntur,
+                   sunt pariatur quaerat natus laudantium doloribus ducimus 
+                   taque! Dicta ipsa nobis magnam corporis, assumenda doloribu
+                   s similique solut!
+            </p>
+            <button class="button">Read more -></button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

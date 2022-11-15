@@ -48,7 +48,8 @@ ol[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
@@ -73,8 +74,10 @@ select {
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -186,10 +189,17 @@ a:focus, a:active, a:hover {
 }
 
 .button {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   color: #FFFFFF;
   background-color: transparent;
   border: 1px solid #C778DD;
+}
+.button > :not(:last-child) {
+  margin-right: 5px;
 }
 .button:hover {
   background: rgba(199, 120, 221, 0.2);
@@ -207,6 +217,7 @@ h6 {
 .projectsBlock__header {
   display: flex;
   align-items: center;
+  margin-bottom: 48px;
 }
 .projectsBlock__header > h1 {
   padding-left: 20px;
@@ -233,7 +244,6 @@ h6 {
   margin-left: 10%;
 }
 .projectsBlock__projects {
-  margin-top: 48px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -267,4 +277,51 @@ h6 {
   margin-bottom: 16px;
 }
 
-/*# sourceMappingURL=index.css.map */
+.skillsBlock {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.skillsBlock__grid {
+  align-self: flex-end;
+  display: flex;
+  width: 60%;
+}
+.skillsBlock__grid > .col {
+  display: flex;
+  flex-direction: column;
+}
+.skillsBlock__grid > .col:not(:last-child) {
+  margin-right: 16px;
+}
+.skillsBlock__grid > .col > .skill {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ABB2BF;
+}
+.skillsBlock__grid > .col > .skill:not(:last-child) {
+  margin-bottom: 16px;
+}
+.skillsBlock__grid > .col > .skill > * {
+  padding: 8px;
+}
+.skillsBlock__grid > .col > .skill > h4 {
+  border-bottom: 1px solid #ABB2BF;
+}
+
+.aboutBlock {
+  margin-top: 70px;
+}
+.aboutBlock__text {
+  width: 40%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+.aboutBlock__text > p {
+  margin-bottom: 20px;
+}
+
+#react {
+  display: inline-block;
+}/*# sourceMappingURL=index.css.map */
