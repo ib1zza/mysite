@@ -45,15 +45,39 @@ const setScroll = (n) => (scroll = n);
 reactLogoEl.addEventListener("mouseover", () => h(reactLogo));
 reactLogoEl.addEventListener("mouseleave", () => l(reactLogo));
 
+const animateElements = document.querySelectorAll(".anim")[0];
+
+let mas = [];
+
+for (let i = 0; i < animateElements.length; i++) {
+  mas[i] = animateElements[i].getBoundingClientRect().top + window.scrollY;
+}
+
 window.addEventListener("scroll", function () {
   setScroll(scrollY + "px");
   console.log(scroll);
-  if (parseInt(scroll) > 1000) {
+  if (parseInt(scroll) > 1200) {
     console.log("true");
-    
+    showF();
+  } else {
+    hideF();
   }
 });
 
-if (parseInt(scroll) > 1000) {
+if (parseInt(scroll) > 1700) {
   console.log("true");
 }
+
+const showF = () =>
+  anime({
+    targets: animateElements,
+    translateX: 0,
+    easing: "linear",
+  });
+
+const hideF = () =>
+  anime({
+    targets: animateElements,
+    translateX: -250,
+    easing: "linear",
+  });

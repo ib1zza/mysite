@@ -1,6 +1,7 @@
-@import "_vars";
+@import "vars";
 @import "nullstyle";
 @import "ibg";
+@import "transitions";
 
 ._container {
     width: 1024px;
@@ -50,10 +51,13 @@ body {
 
 a {
     color: #ABB2BF;
+    @include transition(0.5s);
 }
 
 a:focus, a:active, a:hover {
     color: #FFFFFF;
+    border-bottom: 2px solid white;
+    @include transition(0.5s);
 }
 
 .welcomeBlock {
