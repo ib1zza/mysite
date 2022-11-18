@@ -252,10 +252,72 @@ h6
 }
 
 
-#react {
+.react {
     display: inline-block;
 
-    &:hover {
+    &>i:hover {
         transform: scale(1.5);
+    }
+}
+
+.contactsBlock {
+    &__text {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            width: 50%;
+        }
+
+        section {
+            border: 1px solid #ABB2BF;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+footer {
+    margin-top: 130px;
+    width: 100%;
+    border-top: 1px solid #ABB2BF;
+}
+
+.footer {
+    padding: 32px 0;
+    display: grid;
+    grid-template-areas: "logo media"
+    "copyright copyright";
+    justify-content: space-between;
+
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+        grid-area: logo;
+    }
+    &__media {
+        display: flex;
+        flex-direction: column;
+        grid-area: media;
+        
+        &>h2 {
+            font-size: 24px;
+        }
+        &>.footer__media__links>a{
+            height: 20px;
+            font-size: 20px;
+        }
+    }
+
+    &>span {
+        font-size: 16px;
+        padding-top: 48px;
+        display: block;
+        width: 100%;
+        grid-area: copyright;
+        text-align: center;
     }
 }

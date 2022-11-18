@@ -13,7 +13,10 @@ function ibg() {
 ibg();
 
 const reactLogoEl = document.querySelector(".header__logo");
-const reactLogo = document.querySelector("#react");
+const reactLogo = [...document.querySelectorAll(".react")];
+const reactLogo1 = document.querySelector(".react");
+
+console.log(reactLogo1);
 
 const loopRotate = anime({
   targets: reactLogo,
@@ -22,13 +25,6 @@ const loopRotate = anime({
   rotate: "1turn",
   easing: "linear",
 });
-
-// const scaleEl = anime({
-//   targets: reactLogoEl,
-//   duration: 1000,
-//   scale: 2,
-//   easing: "linear",
-// });
 
 loopRotate.start;
 
@@ -42,5 +38,22 @@ const l = (el) => {
 
 // animation.seek(animation.duration);
 
+let scroll = scrollY;
+
+const setScroll = (n) => (scroll = n);
+
 reactLogoEl.addEventListener("mouseover", () => h(reactLogo));
 reactLogoEl.addEventListener("mouseleave", () => l(reactLogo));
+
+window.addEventListener("scroll", function () {
+  setScroll(scrollY + "px");
+  console.log(scroll);
+  if (parseInt(scroll) > 1000) {
+    console.log("true");
+    
+  }
+});
+
+if (parseInt(scroll) > 1000) {
+  console.log("true");
+}

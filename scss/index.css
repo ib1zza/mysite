@@ -322,6 +322,62 @@ h6 {
   margin-bottom: 20px;
 }
 
-#react {
+.react {
   display: inline-block;
+}
+.react > i:hover {
+  transform: scale(1.5);
+}
+
+.contactsBlock__text {
+  display: flex;
+  justify-content: space-between;
+}
+.contactsBlock__text p {
+  width: 50%;
+}
+.contactsBlock__text section {
+  border: 1px solid #ABB2BF;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 130px;
+  width: 100%;
+  border-top: 1px solid #ABB2BF;
+}
+
+.footer {
+  padding: 32px 0;
+  display: grid;
+  grid-template-areas: "logo media" "copyright copyright";
+  justify-content: space-between;
+}
+.footer__logo {
+  font-size: 24px;
+  font-weight: bold;
+  grid-area: logo;
+}
+.footer__media {
+  display: flex;
+  flex-direction: column;
+  grid-area: media;
+}
+.footer__media > h2 {
+  font-size: 24px;
+}
+.footer__media > .footer__media__links > a {
+  height: 20px;
+  font-size: 20px;
+}
+.footer > span {
+  font-size: 16px;
+  padding-top: 48px;
+  display: block;
+  width: 100%;
+  grid-area: copyright;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
